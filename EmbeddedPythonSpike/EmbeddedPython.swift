@@ -48,7 +48,7 @@ public struct DefaultPythonModules {
         os.environ["OPENAI_API_KEY"] = "..."
         
         if let apiKey = Bundle.main.infoDictionary?["OPENAI_API_KEY"] as? String {
-            print(apiKey)
+            os.environ["OPENAI_API_KEY"] = PythonObject(stringLiteral: apiKey)
         }
     }
     
