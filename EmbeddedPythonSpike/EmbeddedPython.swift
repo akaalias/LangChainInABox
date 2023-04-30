@@ -46,6 +46,10 @@ public struct DefaultPythonModules {
     func setOpenAIKey() {
         let os = Python.import("os")
         os.environ["OPENAI_API_KEY"] = "..."
+        
+        if let apiKey = Bundle.main.infoDictionary?["OPENAI_API_KEY"] as? String {
+            print(apiKey)
+        }
     }
     
     // Simple example of loading Python modules into the runtime

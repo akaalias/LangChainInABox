@@ -59,7 +59,6 @@
 		560771F629F1414700A07F70 = {
 			isa = PBXGroup;
 			children = (
-				56C2E52229FE7FA800267DA7 /* APIConfig.xcconfig */,
 				5607721D29F1432700A07F70 /* README.md */,
 				5607721F29F1454B00A07F70 /* ready.png */,
 				5607722029F1454B00A07F70 /* upload-files.png */,
@@ -82,6 +81,7 @@
 		5607720129F1414800A07F70 /* EmbeddedPythonSpike */ = {
 			isa = PBXGroup;
 			children = (
+				56C2E52229FE7FA800267DA7 /* APIConfig.xcconfig */,
 				560A7EE329F5A90D00E0DCD2 /* PythonDocument.swift */,
 				560A7EE229F5A8E200E0DCD2 /* Info.plist */,
 				5607720229F1414800A07F70 /* EmbeddedPythonSpikeApp.swift */,
@@ -224,6 +224,7 @@
 /* Begin XCBuildConfiguration section */
 		5607720C29F1414800A07F70 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56C2E52229FE7FA800267DA7 /* APIConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -284,6 +285,7 @@
 		};
 		5607720D29F1414800A07F70 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56C2E52229FE7FA800267DA7 /* APIConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
