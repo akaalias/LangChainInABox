@@ -12,22 +12,23 @@ struct PythonEditor: View {
     @StateObject var state = ApplicationState.shared
     @EnvironmentObject var embeddedPython: EmbeddedPython
 
-    @AppStorage("fontsize") var fontSize = 18
+    @AppStorage("fontsize") var fontSize = 16
     @State private var language = CodeEditor.Language.python
+    @State private var theme = CodeEditor.ThemeName.pojoaque
+
     @State var source = """
+import os
+os.environ["OPENAI_API_KEY"] = "..."
 from langchain.llms import OpenAI
 llm = OpenAI(temperature=0.9)
-text = "What would be a good company name for a company that makes colorful socks?"
-idea = llm(text)
-print(idea)
+text = "Brainstorm 15 company names for a company that makes colorful socks?"
+print(llm(text))
 """
 
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                
                 Spacer()
-
                 Text("Imported Modules:")
                 ForEach(ApplicationState.shared.importedPythonModules, id: \.self) { module in
                     Text(module)
@@ -36,9 +37,7 @@ print(idea)
                 }
 
                 Button {
-                    DispatchQueue.main.async {
-                        embeddedPython.runSimpleString(code: self.source)
-                    }
+                    embeddedPython.runSimpleString(code: self.source)
                 } label: {
                     Text("Run")
                 }
@@ -48,7 +47,9 @@ print(idea)
                 
             }
 
-            CodeEditor(source: $source, language: language,
+            CodeEditor(source: $source,
+                       language: language,
+                       theme: theme,
                        fontSize: .init(get: { CGFloat(fontSize)  },
                                        set: { fontSize = Int($0) }))
         }

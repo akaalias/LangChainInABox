@@ -10,7 +10,7 @@ import Python
 import PythonKit
 
 public struct DefaultPythonModules {
-    public static let list = ["os", "langchain"]
+    public static let list = ["langchain"]
     public static let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
 }
 
@@ -25,9 +25,7 @@ public struct DefaultPythonModules {
         // Initialize the Python runtime early in the app
         if  let stdLibPath = Bundle.main.path(forResource: "python-stdlib", ofType: nil),
             let libDynloadPath = Bundle.main.path(forResource: "python-stdlib/lib-dynload", ofType: nil),
-            let langchainLibrariesPath = Bundle.main.path(forResource: "langchain-libraries", ofType: nil)
-
-        {
+            let langchainLibrariesPath = Bundle.main.path(forResource: "langchain-libraries", ofType: nil) {
             setenv("PYTHONHOME", stdLibPath, 1)
             setenv("PYTHONPATH", "\(stdLibPath):\(libDynloadPath):\(langchainLibrariesPath):\(appFolderPath())", 1)
             
@@ -38,7 +36,7 @@ public struct DefaultPythonModules {
                     ApplicationState.shared.importedPythonModules.append(module)
                 }
                 
-                setOpenAIKey()
+                // setOpenAIKey()
             } catch {
                 print(error)
             }
@@ -51,10 +49,10 @@ public struct DefaultPythonModules {
     }
     
     func setOpenAIKey() {
-        let os = Python.import("os")
-        if let apiKey = Bundle.main.infoDictionary?["OPENAI_API_KEY"] as? String {
-            os.environ["OPENAI_API_KEY"] = PythonObject(stringLiteral: apiKey)
-        }
+//        let os = Python.import("os")
+//        if let apiKey = Bundle.main.infoDictionary?["OPENAI_API_KEY"] as? String {
+//            os.environ["OPENAI_API_KEY"] = PythonObject(stringLiteral: apiKey)
+//        }
     }
     
     // Simple example of loading Python modules into the runtime
@@ -90,9 +88,12 @@ public struct DefaultPythonModules {
     
     func runSimpleString(code: String) {
         self.running = true
-        PyRun_SimpleString(code)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.stdoutOutput = ""
+        DispatchQueue.main.async {
+            PyRun_SimpleString(code)
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.stdoutOutput = "Updating..."
             self.stdoutOutput = self.output.contents
             self.running = false
         }
