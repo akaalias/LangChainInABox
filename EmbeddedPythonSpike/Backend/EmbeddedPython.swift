@@ -29,7 +29,7 @@ public struct DefaultPythonModules {
 
         {
             setenv("PYTHONHOME", stdLibPath, 1)
-            setenv("PYTHONPATH", "\(stdLibPath):\(appFolderPath()):\(libDynloadPath):\(langchainLibrariesPath)", 1)
+            setenv("PYTHONPATH", "\(stdLibPath):\(libDynloadPath):\(langchainLibrariesPath):\(appFolderPath())", 1)
             
             do {
                 Py_Initialize()

@@ -1,8 +1,8 @@
 ## Development
 - Copy APIConfig.xcconfig with OpenAI API Key to $ROOT/src/Backend
 
-### LangChain Updates
-- 
+### LangChain Updates Workbench
+- See $ROOT/python-langchain/README.md for details (Not shown in XCode, use Terminal)
 
 ## Evolution
 ![v1.1](v1.1.png)

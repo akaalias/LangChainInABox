@@ -1,3 +1,14 @@
+#!/usr/bin/env zsh
+#
+# The main script to push to github
+#
+# See README.md for instructions
+#
+# abort on errors
+set -e
+
+rm -Rf ../langchain-libraries/*
+
 cp -R ./env/lib/python3.11/site-packages/langchain ../langchain-libraries/
 cp -R ./env/lib/python3.11/site-packages/yaml ../langchain-libraries/
 cp -R ./env/lib/python3.11/site-packages/yarl ../langchain-libraries/

@@ -1,3 +1,17 @@
+## Reason for this folder
+This is where I update langchain and copy over the new libraries to $ROOT/langchain-libraries
+
+## Update $ROOT/langchain-libraries
+### Run Script
+```bash
+$ ./update-langchain.sh
+```
+
+### Clean Build in XCode
+```
+Command-Shift-K
+```
+
 ## Steps taken to create a first distribution
 
 ```bash
@@ -21,6 +35,4 @@ $ codesign -s "Developer ID Application: Alexis Rondeau (HKQARCV8QZ)" -f ./**/*.
 $ codesign -s "Developer ID Application: Alexis Rondeau (HKQARCV8QZ)" -f ./env/lib/python3.11/site-packages/numpy/.dylibs/*.dylib
 
 # Copy libs to distribution folder
-
-
 ```
