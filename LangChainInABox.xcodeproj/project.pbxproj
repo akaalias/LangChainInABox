@@ -18,6 +18,7 @@
 		560A7EE429F5A90D00E0DCD2 /* PythonDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A7EE329F5A90D00E0DCD2 /* PythonDocument.swift */; };
 		560A7EE629F5B85A00E0DCD2 /* EmbeddedPython.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A7EE529F5B85A00E0DCD2 /* EmbeddedPython.swift */; };
 		5655D00B29FE7B0200BB1EDC /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5655D00A29FE7B0200BB1EDC /* PythonKit */; };
+		56B7A05B29FEDB2B00046F6A /* langchain-libraries in Resources */ = {isa = PBXBuildFile; fileRef = 56B7A05A29FEDB2B00046F6A /* langchain-libraries */; };
 		56CC2BDF29FE849D00E0FE11 /* OutputListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CC2BDE29FE849D00E0FE11 /* OutputListener.swift */; };
 		56CC2BE429FE900300E0FE11 /* CodeEditor in Frameworks */ = {isa = PBXBuildFile; productRef = 56CC2BE329FE900300E0FE11 /* CodeEditor */; };
 		56CC2BE629FE93C200E0FE11 /* PythonEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CC2BE529FE93C200E0FE11 /* PythonEditor.swift */; };
@@ -41,6 +42,7 @@
 		560A7EE229F5A8E200E0DCD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		560A7EE329F5A90D00E0DCD2 /* PythonDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PythonDocument.swift; sourceTree = "<group>"; };
 		560A7EE529F5B85A00E0DCD2 /* EmbeddedPython.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddedPython.swift; sourceTree = "<group>"; };
+		56B7A05A29FEDB2B00046F6A /* langchain-libraries */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "langchain-libraries"; sourceTree = "<group>"; };
 		56C2E52229FE7FA800267DA7 /* APIConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIConfig.xcconfig; sourceTree = "<group>"; };
 		56CC2BDE29FE849D00E0FE11 /* OutputListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputListener.swift; sourceTree = "<group>"; };
 		56CC2BE529FE93C200E0FE11 /* PythonEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythonEditor.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				5607721D29F1432700A07F70 /* README.md */,
 				5607721F29F1454B00A07F70 /* ready.png */,
 				5607722029F1454B00A07F70 /* upload-files.png */,
+				56B7A05A29FEDB2B00046F6A /* langchain-libraries */,
 				5607721129F1416D00A07F70 /* python-stdlib */,
 				5607721229F1416D00A07F70 /* Python.xcframework */,
 				56CE8F3A29FE9D51008679B5 /* module.modulemap */,
@@ -217,6 +220,7 @@
 				5607720A29F1414800A07F70 /* Preview Assets.xcassets in Resources */,
 				5607720729F1414800A07F70 /* Assets.xcassets in Resources */,
 				5607721E29F1432700A07F70 /* README.md in Resources */,
+				56B7A05B29FEDB2B00046F6A /* langchain-libraries in Resources */,
 				5607721329F1416D00A07F70 /* python-stdlib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

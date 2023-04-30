@@ -24,10 +24,12 @@ public struct DefaultPythonModules {
     init() {
         // Initialize the Python runtime early in the app
         if  let stdLibPath = Bundle.main.path(forResource: "python-stdlib", ofType: nil),
-            let libDynloadPath = Bundle.main.path(forResource: "python-stdlib/lib-dynload", ofType: nil)
+            let libDynloadPath = Bundle.main.path(forResource: "python-stdlib/lib-dynload", ofType: nil),
+            let langchainLibrariesPath = Bundle.main.path(forResource: "langchain-libraries", ofType: nil)
+
         {
             setenv("PYTHONHOME", stdLibPath, 1)
-            setenv("PYTHONPATH", "\(stdLibPath):\(appFolderPath()):\(libDynloadPath)", 1)
+            setenv("PYTHONPATH", "\(stdLibPath):\(appFolderPath()):\(libDynloadPath):\(langchainLibrariesPath)", 1)
             
             do {
                 Py_Initialize()
