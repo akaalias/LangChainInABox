@@ -17,6 +17,7 @@ struct EmbeddedPythonSpikeApp: App {
             ContentView()
                 .environmentObject(embeddedPython)
         }
+        .windowStyle(.hiddenTitleBar)
         .commands {
             TextFormattingCommands()
         }

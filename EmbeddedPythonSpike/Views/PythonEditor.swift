@@ -25,17 +25,20 @@ print(idea)
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
+                
+                Spacer()
+
                 Text("Imported Modules:")
                 ForEach(ApplicationState.shared.importedPythonModules, id: \.self) { module in
                     Text(module)
                         .padding(4)
                         .background(RoundedRectangle(cornerRadius: 4).fill(.black.opacity(0.3)))
                 }
-                
-                Spacer()
-                
+
                 Button {
-                    embeddedPython.runSimpleString(code: self.source)
+                    DispatchQueue.main.async {
+                        embeddedPython.runSimpleString(code: self.source)
+                    }
                 } label: {
                     Text("Run")
                 }

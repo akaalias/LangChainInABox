@@ -16,10 +16,13 @@ struct StandardOutTerminal: View {
             ProgressView()
                 .progressViewStyle(.linear)
         } else {
-            Text("\(embeddedPython.stdoutOutput.trimmingCharacters(in: .whitespacesAndNewlines))")
-                .multilineTextAlignment(.leading)
-                .font(.system(size: 18))
-                .padding(16)
+            ScrollView {
+                Text("\(embeddedPython.stdoutOutput.trimmingCharacters(in: .whitespacesAndNewlines))")
+                    .multilineTextAlignment(.leading)
+                    .lineSpacing(12)
+                    .font(.system(size: 18))
+                    .padding(16)
+            }
         }
     }
 }

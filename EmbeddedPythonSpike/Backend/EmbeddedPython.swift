@@ -12,7 +12,6 @@ import PythonKit
 public struct DefaultPythonModules {
     public static let list = ["os", "langchain"]
     public static let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-
 }
 
 @MainActor class EmbeddedPython: ObservableObject {
