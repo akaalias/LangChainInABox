@@ -38,6 +38,7 @@
 		560A7EE229F5A8E200E0DCD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		560A7EE329F5A90D00E0DCD2 /* PythonDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PythonDocument.swift; sourceTree = "<group>"; };
 		560A7EE529F5B85A00E0DCD2 /* EmbeddedPython.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddedPython.swift; sourceTree = "<group>"; };
+		56C2E52229FE7FA800267DA7 /* APIConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIConfig.xcconfig; sourceTree = "<group>"; };
 		56F059ED29F6D14000F8B773 /* ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +59,7 @@
 		560771F629F1414700A07F70 = {
 			isa = PBXGroup;
 			children = (
+				56C2E52229FE7FA800267DA7 /* APIConfig.xcconfig */,
 				5607721D29F1432700A07F70 /* README.md */,
 				5607721F29F1454B00A07F70 /* ready.png */,
 				5607722029F1454B00A07F70 /* upload-files.png */,
