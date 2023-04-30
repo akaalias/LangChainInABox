@@ -8,4 +8,5 @@
 set -e
 
 ./update-langchain-local-env.sh
+./sign-libraries.sh 
 ./copy-libraries-to-bundle-folder.sh 

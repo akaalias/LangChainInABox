@@ -1,4 +1,4 @@
-## Reason for this folder
+# This is the update workshop
 This is where I update langchain and copy over the new libraries to $ROOT/langchain-libraries
 
 ## Update $ROOT/langchain-libraries
