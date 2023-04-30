@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5607720329F1414800A07F70 /* EmbeddedPythonSpikeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5607720229F1414800A07F70 /* EmbeddedPythonSpikeApp.swift */; };
+		5607720529F1414800A07F70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5607720429F1414800A07F70 /* ContentView.swift */; };
+		5607720729F1414800A07F70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5607720629F1414800A07F70 /* Assets.xcassets */; };
+		5607720A29F1414800A07F70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5607720929F1414800A07F70 /* Preview Assets.xcassets */; };
+		5607721329F1416D00A07F70 /* python-stdlib in Resources */ = {isa = PBXBuildFile; fileRef = 5607721129F1416D00A07F70 /* python-stdlib */; };
+		5607721429F1416D00A07F70 /* Python.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5607721229F1416D00A07F70 /* Python.xcframework */; };
+		5607721A29F141AB00A07F70 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5607721929F141AB00A07F70 /* SystemConfiguration.framework */; };
+		5607721E29F1432700A07F70 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5607721D29F1432700A07F70 /* README.md */; };
+		560A7EE429F5A90D00E0DCD2 /* PythonDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A7EE329F5A90D00E0DCD2 /* PythonDocument.swift */; };
+		560A7EE629F5B85A00E0DCD2 /* EmbeddedPython.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A7EE529F5B85A00E0DCD2 /* EmbeddedPython.swift */; };
+		5655D00B29FE7B0200BB1EDC /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5655D00A29FE7B0200BB1EDC /* PythonKit */; };
+		56F059EE29F6D14000F8B773 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F059ED29F6D14000F8B773 /* ApplicationState.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		560771FF29F1414800A07F70 /* LangChainInABox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LangChainInABox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5607720229F1414800A07F70 /* EmbeddedPythonSpikeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddedPythonSpikeApp.swift; sourceTree = "<group>"; };
+		5607720429F1414800A07F70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5607720629F1414800A07F70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5607720929F1414800A07F70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5607720B29F1414800A07F70 /* EmbeddedPythonSpike.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EmbeddedPythonSpike.entitlements; sourceTree = "<group>"; };
+		5607721129F1416D00A07F70 /* python-stdlib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "python-stdlib"; sourceTree = "<group>"; };
+		5607721229F1416D00A07F70 /* Python.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Python.xcframework; sourceTree = "<group>"; };
+		5607721929F141AB00A07F70 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5607721B29F1420800A07F70 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = "Python.xcframework/macos-arm64_x86_64/Headers/module.modulemap"; sourceTree = SOURCE_ROOT; };
+		5607721D29F1432700A07F70 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5607721F29F1454B00A07F70 /* ready.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ready.png; sourceTree = "<group>"; };
+		5607722029F1454B00A07F70 /* upload-files.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload-files.png"; sourceTree = "<group>"; };
+		560A7EE229F5A8E200E0DCD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		560A7EE329F5A90D00E0DCD2 /* PythonDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PythonDocument.swift; sourceTree = "<group>"; };
+		560A7EE529F5B85A00E0DCD2 /* EmbeddedPython.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddedPython.swift; sourceTree = "<group>"; };
+		56F059ED29F6D14000F8B773 /* ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		560771FC29F1414800A07F70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5607721429F1416D00A07F70 /* Python.xcframework in Frameworks */,
+				5607721A29F141AB00A07F70 /* SystemConfiguration.framework in Frameworks */,
+				5655D00B29FE7B0200BB1EDC /* PythonKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		560771F629F1414700A07F70 = {
+			isa = PBXGroup;
+			children = (
+				5607721D29F1432700A07F70 /* README.md */,
+				5607721F29F1454B00A07F70 /* ready.png */,
+				5607722029F1454B00A07F70 /* upload-files.png */,
+				5607721129F1416D00A07F70 /* python-stdlib */,
+				5607721229F1416D00A07F70 /* Python.xcframework */,
+				5607720129F1414800A07F70 /* EmbeddedPythonSpike */,
+				5607720029F1414800A07F70 /* Products */,
+				5607721829F141AB00A07F70 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5607720029F1414800A07F70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				560771FF29F1414800A07F70 /* LangChainInABox.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5607720129F1414800A07F70 /* EmbeddedPythonSpike */ = {
+			isa = PBXGroup;
+			children = (
+				560A7EE329F5A90D00E0DCD2 /* PythonDocument.swift */,
+				560A7EE229F5A8E200E0DCD2 /* Info.plist */,
+				5607720229F1414800A07F70 /* EmbeddedPythonSpikeApp.swift */,
+				560A7EE529F5B85A00E0DCD2 /* EmbeddedPython.swift */,
+				56F059ED29F6D14000F8B773 /* ApplicationState.swift */,
+				5607721B29F1420800A07F70 /* module.modulemap */,
+				5607720429F1414800A07F70 /* ContentView.swift */,
+				5607720629F1414800A07F70 /* Assets.xcassets */,
+				5607720B29F1414800A07F70 /* EmbeddedPythonSpike.entitlements */,
+				5607720829F1414800A07F70 /* Preview Content */,
+			);
+			path = EmbeddedPythonSpike;
+			sourceTree = "<group>";
+		};
+		5607720829F1414800A07F70 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5607720929F1414800A07F70 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5607721829F141AB00A07F70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5607721929F141AB00A07F70 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		560771FE29F1414800A07F70 /* LangChainInABox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5607720E29F1414800A07F70 /* Build configuration list for PBXNativeTarget "LangChainInABox" */;
+			buildPhases = (
+				560771FB29F1414800A07F70 /* Sources */,
+				560771FC29F1414800A07F70 /* Frameworks */,
+				560771FD29F1414800A07F70 /* Resources */,
+				5607721C29F1422100A07F70 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LangChainInABox;
+			packageProductDependencies = (
+				5655D00A29FE7B0200BB1EDC /* PythonKit */,
+			);
+			productName = EmbeddedPythonSpike;
+			productReference = 560771FF29F1414800A07F70 /* LangChainInABox.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		560771F729F1414700A07F70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					560771FE29F1414800A07F70 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 560771FA29F1414700A07F70 /* Build configuration list for PBXProject "LangChainInABox" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 560771F629F1414700A07F70;
+			packageReferences = (
+				5655D00929FE7B0200BB1EDC /* XCRemoteSwiftPackageReference "PythonKit" */,
+			);
+			productRefGroup = 5607720029F1414800A07F70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				560771FE29F1414800A07F70 /* LangChainInABox */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		560771FD29F1414800A07F70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5607720A29F1414800A07F70 /* Preview Assets.xcassets in Resources */,
+				5607720729F1414800A07F70 /* Assets.xcassets in Resources */,
+				5607721E29F1432700A07F70 /* README.md in Resources */,
+				5607721329F1416D00A07F70 /* python-stdlib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5607721C29F1422100A07F70 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\necho \"Signing contents of $CODESIGNING_FOLDER_PATH/Contents/Resources/python-stdlib/lib-dynload as $EXPANDED_CODE_SIGN_IDENTITY_NAME ($EXPANDED_CODE_SIGN_IDENTITY)\"\ncd \"$CODESIGNING_FOLDER_PATH/Contents/Resources/python-stdlib/lib-dynload\"\n/usr/bin/codesign --force --sign \"$EXPANDED_CODE_SIGN_IDENTITY\" --options runtime --timestamp=none --preserve-metadata=identifier,entitlements,flags --generate-entitlement-der *.so\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		560771FB29F1414800A07F70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5607720529F1414800A07F70 /* ContentView.swift in Sources */,
+				560A7EE429F5A90D00E0DCD2 /* PythonDocument.swift in Sources */,
+				56F059EE29F6D14000F8B773 /* ApplicationState.swift in Sources */,
+				5607720329F1414800A07F70 /* EmbeddedPythonSpikeApp.swift in Sources */,
+				560A7EE629F5B85A00E0DCD2 /* EmbeddedPython.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5607720C29F1414800A07F70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5607720D29F1414800A07F70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		5607720F29F1414800A07F70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EmbeddedPythonSpike/EmbeddedPythonSpike.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EmbeddedPythonSpike/Preview Content\"";
+				DEVELOPMENT_TEAM = HKQARCV8QZ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmbeddedPythonSpike/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rondeau.EmbeddedPythonSpike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5607721029F1414800A07F70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EmbeddedPythonSpike/EmbeddedPythonSpike.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EmbeddedPythonSpike/Preview Content\"";
+				DEVELOPMENT_TEAM = HKQARCV8QZ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EmbeddedPythonSpike/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rondeau.EmbeddedPythonSpike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		560771FA29F1414700A07F70 /* Build configuration list for PBXProject "LangChainInABox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5607720C29F1414800A07F70 /* Debug */,
+				5607720D29F1414800A07F70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5607720E29F1414800A07F70 /* Build configuration list for PBXNativeTarget "LangChainInABox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5607720F29F1414800A07F70 /* Debug */,
+				5607721029F1414800A07F70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5655D00929FE7B0200BB1EDC /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5655D00A29FE7B0200BB1EDC /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5655D00929FE7B0200BB1EDC /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 560771F729F1414700A07F70 /* Project object */;
+}
