@@ -17,5 +17,8 @@ struct EmbeddedPythonSpikeApp: App {
             ContentView()
                 .environmentObject(embeddedPython)
         }
+        .commands {
+            TextFormattingCommands()
+        }
     }
 }

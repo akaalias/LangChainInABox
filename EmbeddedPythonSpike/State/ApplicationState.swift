@@ -15,3 +15,4 @@ class ApplicationState : ObservableObject {
     @Published var evalResult: PythonObject = PythonObject(stringLiteral: "Default")
     @Published var error: Error?
 }
+

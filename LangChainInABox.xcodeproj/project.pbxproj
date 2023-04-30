@@ -18,6 +18,10 @@
 		560A7EE429F5A90D00E0DCD2 /* PythonDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A7EE329F5A90D00E0DCD2 /* PythonDocument.swift */; };
 		560A7EE629F5B85A00E0DCD2 /* EmbeddedPython.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A7EE529F5B85A00E0DCD2 /* EmbeddedPython.swift */; };
 		5655D00B29FE7B0200BB1EDC /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5655D00A29FE7B0200BB1EDC /* PythonKit */; };
+		56CC2BDF29FE849D00E0FE11 /* OutputListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CC2BDE29FE849D00E0FE11 /* OutputListener.swift */; };
+		56CC2BE429FE900300E0FE11 /* CodeEditor in Frameworks */ = {isa = PBXBuildFile; productRef = 56CC2BE329FE900300E0FE11 /* CodeEditor */; };
+		56CC2BE629FE93C200E0FE11 /* PythonEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CC2BE529FE93C200E0FE11 /* PythonEditor.swift */; };
+		56CC2BE829FE947F00E0FE11 /* StandardOutTerminal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CC2BE729FE947F00E0FE11 /* StandardOutTerminal.swift */; };
 		56F059EE29F6D14000F8B773 /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F059ED29F6D14000F8B773 /* ApplicationState.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +35,6 @@
 		5607721129F1416D00A07F70 /* python-stdlib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "python-stdlib"; sourceTree = "<group>"; };
 		5607721229F1416D00A07F70 /* Python.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Python.xcframework; sourceTree = "<group>"; };
 		5607721929F141AB00A07F70 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		5607721B29F1420800A07F70 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = "Python.xcframework/macos-arm64_x86_64/Headers/module.modulemap"; sourceTree = SOURCE_ROOT; };
 		5607721D29F1432700A07F70 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5607721F29F1454B00A07F70 /* ready.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ready.png; sourceTree = "<group>"; };
 		5607722029F1454B00A07F70 /* upload-files.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload-files.png"; sourceTree = "<group>"; };
@@ -39,6 +42,10 @@
 		560A7EE329F5A90D00E0DCD2 /* PythonDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PythonDocument.swift; sourceTree = "<group>"; };
 		560A7EE529F5B85A00E0DCD2 /* EmbeddedPython.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddedPython.swift; sourceTree = "<group>"; };
 		56C2E52229FE7FA800267DA7 /* APIConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIConfig.xcconfig; sourceTree = "<group>"; };
+		56CC2BDE29FE849D00E0FE11 /* OutputListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputListener.swift; sourceTree = "<group>"; };
+		56CC2BE529FE93C200E0FE11 /* PythonEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythonEditor.swift; sourceTree = "<group>"; };
+		56CC2BE729FE947F00E0FE11 /* StandardOutTerminal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardOutTerminal.swift; sourceTree = "<group>"; };
+		56CE8F3A29FE9D51008679B5 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = "Python.xcframework/macos-arm64_x86_64/Headers/module.modulemap"; sourceTree = "<group>"; };
 		56F059ED29F6D14000F8B773 /* ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56CC2BE429FE900300E0FE11 /* CodeEditor in Frameworks */,
 				5607721429F1416D00A07F70 /* Python.xcframework in Frameworks */,
 				5607721A29F141AB00A07F70 /* SystemConfiguration.framework in Frameworks */,
 				5655D00B29FE7B0200BB1EDC /* PythonKit in Frameworks */,
@@ -64,6 +72,7 @@
 				5607722029F1454B00A07F70 /* upload-files.png */,
 				5607721129F1416D00A07F70 /* python-stdlib */,
 				5607721229F1416D00A07F70 /* Python.xcframework */,
+				56CE8F3A29FE9D51008679B5 /* module.modulemap */,
 				5607720129F1414800A07F70 /* EmbeddedPythonSpike */,
 				5607720029F1414800A07F70 /* Products */,
 				5607721829F141AB00A07F70 /* Frameworks */,
@@ -81,14 +90,11 @@
 		5607720129F1414800A07F70 /* EmbeddedPythonSpike */ = {
 			isa = PBXGroup;
 			children = (
-				56C2E52229FE7FA800267DA7 /* APIConfig.xcconfig */,
-				560A7EE329F5A90D00E0DCD2 /* PythonDocument.swift */,
+				56CC2BEB29FE9AF900E0FE11 /* Views */,
+				56CC2BEA29FE9AED00E0FE11 /* State */,
+				56CC2BE929FE9A9D00E0FE11 /* Backend */,
 				560A7EE229F5A8E200E0DCD2 /* Info.plist */,
 				5607720229F1414800A07F70 /* EmbeddedPythonSpikeApp.swift */,
-				560A7EE529F5B85A00E0DCD2 /* EmbeddedPython.swift */,
-				56F059ED29F6D14000F8B773 /* ApplicationState.swift */,
-				5607721B29F1420800A07F70 /* module.modulemap */,
-				5607720429F1414800A07F70 /* ContentView.swift */,
 				5607720629F1414800A07F70 /* Assets.xcassets */,
 				5607720B29F1414800A07F70 /* EmbeddedPythonSpike.entitlements */,
 				5607720829F1414800A07F70 /* Preview Content */,
@@ -112,6 +118,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		56CC2BE929FE9A9D00E0FE11 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				56C2E52229FE7FA800267DA7 /* APIConfig.xcconfig */,
+				560A7EE329F5A90D00E0DCD2 /* PythonDocument.swift */,
+				56CC2BDE29FE849D00E0FE11 /* OutputListener.swift */,
+				560A7EE529F5B85A00E0DCD2 /* EmbeddedPython.swift */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		56CC2BEA29FE9AED00E0FE11 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				56F059ED29F6D14000F8B773 /* ApplicationState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		56CC2BEB29FE9AF900E0FE11 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5607720429F1414800A07F70 /* ContentView.swift */,
+				56CC2BE729FE947F00E0FE11 /* StandardOutTerminal.swift */,
+				56CC2BE529FE93C200E0FE11 /* PythonEditor.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,6 +166,7 @@
 			name = LangChainInABox;
 			packageProductDependencies = (
 				5655D00A29FE7B0200BB1EDC /* PythonKit */,
+				56CC2BE329FE900300E0FE11 /* CodeEditor */,
 			);
 			productName = EmbeddedPythonSpike;
 			productReference = 560771FF29F1414800A07F70 /* LangChainInABox.app */;
@@ -162,6 +198,7 @@
 			mainGroup = 560771F629F1414700A07F70;
 			packageReferences = (
 				5655D00929FE7B0200BB1EDC /* XCRemoteSwiftPackageReference "PythonKit" */,
+				56CC2BE229FE900300E0FE11 /* XCRemoteSwiftPackageReference "CodeEditor" */,
 			);
 			productRefGroup = 5607720029F1414800A07F70 /* Products */;
 			projectDirPath = "";
@@ -211,10 +248,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56CC2BE829FE947F00E0FE11 /* StandardOutTerminal.swift in Sources */,
+				56CC2BDF29FE849D00E0FE11 /* OutputListener.swift in Sources */,
 				5607720529F1414800A07F70 /* ContentView.swift in Sources */,
 				560A7EE429F5A90D00E0DCD2 /* PythonDocument.swift in Sources */,
 				56F059EE29F6D14000F8B773 /* ApplicationState.swift in Sources */,
 				5607720329F1414800A07F70 /* EmbeddedPythonSpikeApp.swift in Sources */,
+				56CC2BE629FE93C200E0FE11 /* PythonEditor.swift in Sources */,
 				560A7EE629F5B85A00E0DCD2 /* EmbeddedPython.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,9 +383,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EmbeddedPythonSpike/EmbeddedPythonSpike.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_ASSET_PATHS = "\"EmbeddedPythonSpike/Preview Content\"";
 				DEVELOPMENT_TEAM = HKQARCV8QZ;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -357,7 +398,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rondeau.EmbeddedPythonSpike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -371,9 +412,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EmbeddedPythonSpike/EmbeddedPythonSpike.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_ASSET_PATHS = "\"EmbeddedPythonSpike/Preview Content\"";
 				DEVELOPMENT_TEAM = HKQARCV8QZ;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -385,7 +427,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.rondeau.EmbeddedPythonSpike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -425,6 +467,14 @@
 				kind = branch;
 			};
 		};
+		56CC2BE229FE900300E0FE11 /* XCRemoteSwiftPackageReference "CodeEditor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ZeeZide/CodeEditor.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -432,6 +482,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5655D00929FE7B0200BB1EDC /* XCRemoteSwiftPackageReference "PythonKit" */;
 			productName = PythonKit;
+		};
+		56CC2BE329FE900300E0FE11 /* CodeEditor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 56CC2BE229FE900300E0FE11 /* XCRemoteSwiftPackageReference "CodeEditor" */;
+			productName = CodeEditor;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

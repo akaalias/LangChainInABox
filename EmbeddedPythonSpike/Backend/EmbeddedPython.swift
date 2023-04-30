@@ -18,6 +18,9 @@ public struct DefaultPythonModules {
 @MainActor class EmbeddedPython: ObservableObject {
     @Published var running: Bool = false
     @Published var evalResult: PythonObject?
+    @Published var stdoutOutput: String = ""
+    
+    var output = OutputListener()
 
     init() {
         // Initialize the Python runtime early in the app
@@ -41,11 +44,13 @@ public struct DefaultPythonModules {
             
             self.evalResult = PythonObject(stringLiteral: "Default")
         }
+        
+        // Open so we can capture stdout
+        output.openConsolePipe()
     }
     
     func setOpenAIKey() {
         let os = Python.import("os")
-        os.environ["OPENAI_API_KEY"] = "..."
         if let apiKey = Bundle.main.infoDictionary?["OPENAI_API_KEY"] as? String {
             os.environ["OPENAI_API_KEY"] = PythonObject(stringLiteral: apiKey)
         }
@@ -82,6 +87,17 @@ public struct DefaultPythonModules {
         }
     }
     
+    func runSimpleString(code: String) {
+        self.running = true
+        PyRun_SimpleString(code)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.stdoutOutput = ""
+            self.stdoutOutput = self.output.contents
+            self.running = false
+        }
+    }
+    
+    /// The idea was initially I'd use python import a newline created module file
     func runUserFile(hash: Int) {
         do {
             let user = try Python.attemptImport("user_\(hash)")
