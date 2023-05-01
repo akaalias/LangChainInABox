@@ -1,5 +1,7 @@
 # LangChain in a Box
-Hi there, [Alexis](https://alexisrondeau.me) here! I [make](https://jamgpt.app) [things](https://unblah.me/) [that](https://getpudding.app/) [do](https://getstreamline.app/) [things](https://alexisrondeau.me/algorand-ballet/). I am not a LangChain expert (yet) but I am starting to understand the power it provides.
+Hi there, [Alexis](https://alexisrondeau.me) here! 
+
+I [make](https://jamgpt.app) 👏🏻 [things](https://unblah.me/) 👏🏻 [that](https://getpudding.app/) 👏🏻 [do](https://getstreamline.app/) 👏🏻 [things](https://alexisrondeau.me/algorand-ballet/). 
 
 This project is a 'batteries-included' macOS UI for LangChain. It ships with a self-contained, embedded, Apple-notarisable Python 3.11 and LangChain libraries. It also includes documentation on how to update langchain dependencies over time.
 
