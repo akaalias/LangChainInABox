@@ -9,6 +9,8 @@ I saw my girlfriend fully embrace GPT-4 via [an app](https://jamgpt.app) I built
 
 The hard, and tedious, part - like installing brew, getting the right Python version, creating the right venv, updating langchain, choosing and learning an IDE - should not a barrier to entry for her. 
 
+
+
 ## Development Notes
 To build with XCode, please create APIConfig.xcconfig under $ROOT/EmbeddedPythonSpike/Backend with this content
 
@@ -20,14 +22,16 @@ $ echo "OPENAI_API_KEY = your-api-key" > ./EmbeddedPythonSpike/Backend/APIConfig
 
 ### How to update LangChain and its dependencies
 
-See [/python-langchain/README.md](./python-langchain/README.md) for details (Not shown in XCode, use Terminal)
+See [the documentation](./python-langchain/README.md) for details (Not shown in XCode, use Terminal)
 
 ## UI Evolution
 ![v1.1](v1.1.png)
 ![First Success](first-success.png)
 
-## Notarizing
+## Distributing the App 
+This project is based on [my template for embedding Python in a signed macOS app](https://github.com/akaalias/EmbeddedPythonAppTemplate), which itself stands on the shoulders of these giants: [Eldar Eliav](https://medium.com/swift2go/embedding-python-interpreter-inside-a-macos-app-and-publish-to-app-store-successfully-309be9fb96a5), [Eddie Espinal](https://medium.com/@eddieespinal), and [this person](https://butternut-ray-869.notion.site/Embedding-Python-in-a-Swift-App-Using-Xcode-Apple-Silicon-and-Intel-59f5a3c832914a96990dfcc0e610c720)
+
+So far, I've tested 
 ![Notarized with Developer ID](organizer-with-notarized-app-bundle.png)
 ![Upload and Sign](langchain.zip-content-apple-upload.png)
 
-- Based on [my template for embedding Python in a signed macOS app](https://github.com/akaalias/EmbeddedPythonAppTemplate)
