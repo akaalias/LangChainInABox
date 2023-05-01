@@ -35,4 +35,8 @@ $ codesign -s "Developer ID Application: Alexis Rondeau (HKQARCV8QZ)" -f ./**/*.
 $ codesign -s "Developer ID Application: Alexis Rondeau (HKQARCV8QZ)" -f ./env/lib/python3.11/site-packages/numpy/.dylibs/*.dylib
 
 # Copy libs to distribution folder
+rm -Rf ../langchain-libraries/*
+
+cp -R ./env/lib/python3.11/site-packages/langchain ../langchain-libraries/
+# ...a list of all relevant libraries
 ```
