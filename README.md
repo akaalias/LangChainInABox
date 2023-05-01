@@ -9,20 +9,25 @@ I saw my girlfriend fully embrace GPT-4 via [an app](https://jamgpt.app) I built
 
 The hard, and tedious, part - like installing brew, getting the right Python version, creating the right venv, updating langchain, choosing and learning an IDE - should not a barrier to entry for her. 
 
+## Development Notes
+To build with XCode, please create APIConfig.xcconfig under $ROOT/EmbeddedPythonSpike/Backend with this content
 
-## Run in development
-- Create APIConfig.xcconfig under $ROOT/EmbeddedPythonSpike/Backend with this content
-
-```config
-OPENAI_API_KEY = your-api-key
+```bash
+$ cd $PROJECT_ROOT
+$ touch ./EmbeddedPythonSpike/Backend/APIConfig.xcconfig
+$ echo "OPENAI_API_KEY = your-api-key" > ./EmbeddedPythonSpike/Backend/APIConfig.xcconfig
 ```
 
-### How to update LangChain
-- See [/python-langchain/README.md](./python-langchain/README.md) for details (Not shown in XCode, use Terminal)
+### How to update LangChain and its dependencies
 
-## Evolution
+See [/python-langchain/README.md](./python-langchain/README.md) for details (Not shown in XCode, use Terminal)
+
+## UI Evolution
 ![v1.1](v1.1.png)
 ![First Success](first-success.png)
-![Notarized](ready.png)
+
+## Notarizing
+![Notarized with Developer ID](organizer-with-notarized-app-bundle.png)
+![Upload and Sign](langchain.zip-content-apple-upload.png)
 
 - Based on [my template for embedding Python in a signed macOS app](https://github.com/akaalias/EmbeddedPythonAppTemplate)

@@ -42,6 +42,8 @@
 		560A7EE229F5A8E200E0DCD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		560A7EE329F5A90D00E0DCD2 /* PythonDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PythonDocument.swift; sourceTree = "<group>"; };
 		560A7EE529F5B85A00E0DCD2 /* EmbeddedPython.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddedPython.swift; sourceTree = "<group>"; };
+		562AD4C329FFA37C00E93DE0 /* langchain.zip-content-apple-upload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "langchain.zip-content-apple-upload.png"; sourceTree = "<group>"; };
+		562AD4C429FFA37C00E93DE0 /* organizer-with-notarized-app-bundle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "organizer-with-notarized-app-bundle.png"; sourceTree = "<group>"; };
 		56B7A05A29FEDB2B00046F6A /* langchain-libraries */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "langchain-libraries"; sourceTree = "<group>"; };
 		56C2E52229FE7FA800267DA7 /* APIConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIConfig.xcconfig; sourceTree = "<group>"; };
 		56CC2BDE29FE849D00E0FE11 /* OutputListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputListener.swift; sourceTree = "<group>"; };
@@ -70,6 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				5607721D29F1432700A07F70 /* README.md */,
+				562AD4C329FFA37C00E93DE0 /* langchain.zip-content-apple-upload.png */,
+				562AD4C429FFA37C00E93DE0 /* organizer-with-notarized-app-bundle.png */,
 				5607721F29F1454B00A07F70 /* ready.png */,
 				5607722029F1454B00A07F70 /* upload-files.png */,
 				56B7A05A29FEDB2B00046F6A /* langchain-libraries */,
